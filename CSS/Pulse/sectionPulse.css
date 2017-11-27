@@ -1,0 +1,59 @@
+/*
+the entire animation is now controlled by global variables!
+"container-size" is the size of the animation and "duration" is the
+speed of the animation. ONLY change the mentioned varaibles!!!
+Colors are still custom, no way darken afaik.
+*/
+:root {
+  --container-size: 200px;
+  --duration: 2s;
+
+
+  --section-size: calc(var(--container-size)*0.5);
+  --block-size: calc(var(--container-size)/25*7.5);
+  --margin-space: calc(var(--container-size)*0.1);
+
+  --stagger: calc(var(--duration)/4);
+}
+
+body{
+  background: #ECECEC;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  width: var(--container-size);
+  height: var(--container-size);
+
+  /*this center the container in whatever body (or div) it is in*/
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section {
+  width: var(--section-size);
+  height: var(--section-size);
+  float: left;
+}
+
+.block {
+  height: var(--block-size);
+  width: var(--block-size);
+  background: #3A539B;
+  margin: var(--margin-space);
+
+  animation-name: scale;
+  animation-duration: var(--duration);
+  animation-iteration-count: infinite;
+}
+
+/*(the last) half of the animation isnt being run! (it is but that half does nothing)*/
+@keyframes scale {
+ 0%, {height: var(--block-size); width: var(--block-size); margin: var(--margin-space); background: #3A539B;}
+ 25% {height: calc(var(--container-size)/2); width: calc(var(--container-size)/2); margin: 0px; background: #4B77BE;}
+ 50% {height: var(--block-size); width: var(--block-size); margin: var(--margin-space); background: #3A539B;}
+}

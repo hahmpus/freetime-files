@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Pulsating loading thing</title>
+  <meta name="description" content="loading-box-thingy">
+  <meta name="author" content="Hampus">
+
+  <link rel="stylesheet" href="sectionPulse.css">
+
+</head>
+
+<body>
+
+  <div id="container">
+    <div class="section">
+      <div class="block">
+      </div>
+    </div>
+    <div class="section">
+      <div class="block" style="animation-delay: var(--stagger);"></div>
+    </div>
+    <div class="section">
+      <div class="block" style="animation-delay: calc(var(--stagger)*3);"></div>
+    </div>
+    <div class="section">
+      <div class="block" style="animation-delay: calc(var(--stagger)*2);"></div>
+    </div>
+  </div>
+
+</body>
+
+
+
+</html>

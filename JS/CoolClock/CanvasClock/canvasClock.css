@@ -1,0 +1,23 @@
+body{
+  font-family: Verdana;
+  background: #ECECEC;
+  color: red;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  height: 400px;
+  width: 400px;
+  border: 1px solid transparent;
+
+  letter-spacing: -1.5px;
+
+  /*centers the container in the middle of body, and only this!*/
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+}

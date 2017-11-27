@@ -1,0 +1,51 @@
+body{
+  font-family: Georgia;
+  background: #ECECEC;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#container {
+  width: 250px;
+  height: 250px;
+
+  /*centers the container in the middle of body, and only this!*/
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation-name: pacMove;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.pacman {
+
+  width: 0px;
+  height: 0px;
+  border-right: 125px solid transparent;
+  border-top: 125px solid #F7CA18;
+  border-left: 125px solid #F7CA18;
+  border-bottom: 125px solid #F7CA18;
+  border-radius: 50%;
+
+  animation-name: omnom;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  animation-timing-function: linear;
+}
+
+@keyframes omnom {
+  from {transform: rotate(45deg);}
+  to {transform: rotate(-45deg);}
+}
+
+@keyframes pacMove {
+  from {left: -15%}
+  to {left: 115%}
+}

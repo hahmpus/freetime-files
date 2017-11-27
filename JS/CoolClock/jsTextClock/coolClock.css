@@ -1,0 +1,68 @@
+body{
+  font-family: Verdana;
+  background: #ECECEC;
+  color: #182837;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  height: auto;
+  width: 200px;
+  border: 1px solid transparent;
+
+  /*centers the container in the middle of body, and only this!*/
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.subBox {
+  width: 100px;
+  height: 100px;
+
+  overflow: visible;
+  white-space: nowrap;
+  line-height: 100px;
+
+  float: left;
+}
+
+/*x minutes*/
+#minAm {
+  direction: rtl;
+  font-size: 100px;
+}
+
+/*"minutes, and"*/
+#min {
+  font-size: 35px;
+  line-height: 150px;
+}
+
+/*x seconds*/
+#secAm {
+  direction: rtl;
+  font-size: 100px;
+}
+
+/*"seconds"*/
+#sec {
+  font-size: 35px;
+  line-height: 110px;
+}
+
+/*to, past*/
+#arg {
+  direction: rtl;
+  font-size: 35px;
+  line-height: 60px;
+}
+
+/*x hour*/
+#hourAm {
+  font-size: 100px;
+}

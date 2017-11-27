@@ -1,0 +1,104 @@
+body{
+  background: #ECECEC;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid transparent;
+
+  perspective: 1000px;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid transparent;
+}
+
+#cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  transform: translateZ( -100px );
+  transform-style: preserve-3d;
+
+  text-align: center;
+  line-height: 200px;
+  font-size: 100px;
+}
+
+#cube figure {
+  margin: 0;
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: absolute;
+  opacity: 1;
+}
+
+#cube .legs {
+  width: 66.67px;
+  height: 200px;
+  float: left;
+}
+
+#cube .tops {
+  width: 66.67px;
+  height: 66.67px;
+  position: absolute;
+}
+
+#cube .lips {
+  width: 66.67px;
+  height: 111px;
+  background: black;
+
+  position: absolute;
+}
+
+/*then move each face to correct position...*/
+#cube .front  { transform: rotateY(   0deg ) translateZ( 100px ); }
+#cube .back   { transform: rotateX( 180deg ) translateZ( 100px ); }
+#cube .right  { transform: rotateY(  90deg ) translateZ( 100px ); }
+#cube .left   { transform: rotateY( -90deg ) translateZ( 100px ); }
+#cube .top    { transform: rotateX(  90deg ) translateZ( 100px ); }
+#cube .bottom { transform: rotateX( -90deg ) translateZ( 100px ); }
+
+/*then move each face to correct position...*/
+#cube .innerFront  { transform: rotateY(   0deg ) translateZ( 33px); }
+#cube .innerBack   { transform: rotateX( 180deg ) translateZ( 33px ); }
+#cube .innerRight  { transform: rotateY(  90deg ) translateZ( 33px ); }
+#cube .innerLeft   { transform: rotateY( -90deg ) translateZ( 33px ); }
+
+
+/*change color of the nintendo "N"*/
+#cube .front .legs {background: #339900;}
+#cube .back .legs {background: #339900;}
+#cube .right .legs {background: #000099;}
+#cube .left .legs {background: #000099;}
+
+#cube .innerFront .legs {background: #339900;}
+#cube .innerBack .legs {background: #339900;}
+#cube .innerRight .legs {background: #000099;}
+#cube .innerLeft .legs {background: #000099;}
+
+/*and color the "top corners"*/
+#cube .top .tops {background: #f5b200;}
+#cube .bottom .tops {background: #f5b200;}
+
+/*and then play animations to show a face (i.e. rotate the ENTIRE cube)*/
+#cube.show-front  { transform: translateZ( -100px ) rotateY(    45deg ); }
+#cube.show-back   { transform: translateZ( -100px ) rotateY( -45deg ); }
+#cube.show-right  { transform: translateZ( -100px ) rotateY(  -135deg ); }
+#cube.show-left   { transform: translateZ( -100px ) rotateY(   135deg ); }
+#cube.show-top    { transform: translateZ( -100px ) rotateX(  -90deg ); }
+#cube.show-bottom { transform: translateZ( -100px ) rotateX(   90deg ); }
+
+/*and finally make everything animate*/
+#cube { transition: transform 0.75s; }

@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Pulsating loading thing</title>
+  <meta name="description" content="loading-box-thingy">
+  <meta name="author" content="Hampus">
+  <link rel="stylesheet" href="n64Logo.css">
+</head>
+
+<body>
+
+  <section class="container">
+    <div id="cube">
+
+      <!--these are the "thiccness" of the letters (the N) -->
+      <div class="lips" style="top: -10px; left: 0; transform: rotateX(37deg); background: #339900"></div>
+      <div class="lips" style="top: -10px; right: 0; transform: rotateX(-37deg); background: #339900"></div>
+      <div class="lips" style="bottom: -10px; left: 0; transform: rotateX(37deg); background: #339900"></div>
+      <div class="lips" style="bottom: -10px; right: 0; transform: rotateX(-37deg); background: #339900"></div>
+
+      <div class="lips" style="top: -10px; left: 66.67px; transform: translateZ(66.67px) rotateY(90deg) rotateX(37deg); background: #e10915"></div>
+      <div class="lips" style="top: -10px; right: 66.67px; transform: translateZ(-66.67px) rotateY(90deg) rotateX(-37deg); background: #e10915"></div>
+      <div class="lips" style="bottom: -10px; left: 66.67px; transform: translateZ(66.67px) rotateY(90deg) rotateX(37deg); background: #e10915"></div>
+      <div class="lips" style="bottom: -10px; right: 66.67px; transform: translateZ(-66.67px) rotateY(90deg) rotateX(-37deg); background: #e10915"></div>
+
+      <!-- this is both the inner and outer side of the front N-->
+      <figure class="front">
+        <div class="legs"></div>
+        <div class="legs" style="transform: rotate(-37deg);"></div>
+        <div class="legs"></div>
+      </figure>
+
+      <figure class="innerFront">
+        <div class="legs"></div>
+        <div class="legs" style="transform: rotate(-37deg);"></div>
+        <div class="legs"></div>
+      </figure>
+
+        <!-- this is both the inner and outer side of the back N-->
+      <figure class="back">
+        <div class="legs"></div>
+        <div class="legs" style="transform: rotate(-37deg);"></div>
+        <div class="legs"></div>
+      </figure>
+
+      <figure class="innerBack">
+        <div class="legs"></div>
+        <div class="legs" style="transform: rotate(-37deg);"></div>
+        <div class="legs"></div>
+      </figure>
+
+      <!-- this is both the inner and outer side of the right N-->
+      <figure class="right">
+        <div class="legs"></div>
+        <div class="legs" style="transform: rotate(-37deg);"></div>
+        <div class="legs"></div>
+      </figure>
+
+      <figure class="innerRight">
+        <div class="legs"></div>
+        <div class="legs" style="transform: rotate(-37deg);"></div>
+        <div class="legs"></div>
+      </figure>
+
+        <!-- this is both the inner and outer side of the left N-->
+      <figure class="left">
+        <div class="legs"></div>
+        <div class="legs" style="transform: rotate(-37deg);"></div>
+        <div class="legs"></div>
+      </figure>
+
+      <figure class="innerLeft">
+        <div class="legs"></div>
+        <div class="legs" style="transform: rotate(-37deg);"></div>
+        <div class="legs"></div>
+      </figure>
+
+        <!-- this is both the top and bottom corners-->
+      <figure class="top">
+        <div class="tops" style="top: 0; left: 0;"></></div>
+        <div class="tops" style="top: 0; right: 0;"></div>
+        <div class="tops" style="bottom: 0; left: 0;"></></div>
+        <div class="tops" style="bottom: 0; right: 0;"></></div>
+      </figure>
+
+      <figure class="bottom">
+        <div class="tops" style="top: 0; left: 0;"></></div>
+        <div class="tops" style="top: 0; right: 0;"></div>
+        <div class="tops" style="bottom: 0; left: 0;"></></div>
+        <div class="tops" style="bottom: 0; right: 0;"></></div>
+      </figure>
+    </div>
+  </section>
+
+  <p id="show-buttons">
+    <button class="show-front">Show 1</button>
+    <button class="show-back">Show 2</button>
+    <button class="show-right">Show 3</button>
+    <button class="show-left">Show 4</button>
+    <button class="show-top">Show 5</button>
+    <button class="show-bottom">Show 6</button>
+  </p>
+
+  <script src="n64Logo.js"></script>
+
+</body>
+
+
+
+</html>
