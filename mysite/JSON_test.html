@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<script src="CV_JSON.js"></script>
+<script>
+
+/*1x persObj -> Firstname, Surname, Age*/
+/*1x pitchObj -> Pitch*/
+/*1x contObj -> Street, City, Zip, Github*/
+/*3x eduObj -> School, Abbrevation, Start, End, Description*/
+/*2x langObj -> Language*/
+/*2x meritObj -> Subject, Merit*/
+
+/*fetch person*/
+for (x in persObj){
+	console.log(x + ": " + persObj[x]);
+}
+
+console.log("");
+
+/*fetch contact*/
+for (x in contObj){
+	console.log(x + ": " + contObj[x]);
+}
+
+console.log("");
+
+/*fetch pitch*/
+for (x in pitchObj){
+	console.log(x + ": " + pitchObj[x]);
+}
+
+console.log("");
+
+/*fetch educations*/
+for (var i = 0; i < eduObj.educations.length; i++){
+	for (x in eduObj.educations[i]){
+		console.log(x + ": " + eduObj.educations[i][x]);
+	}
+	console.log("");
+}
+
+</script>
+</body>
+</html>
